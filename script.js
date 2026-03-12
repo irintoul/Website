@@ -238,4 +238,4 @@ document.body.insertBefore(skipLink, document.body.firstChild);
 
 console.log('%c👋 Welcome to Equal Path!', 'font-size: 20px; color: #3b82f6; font-weight: bold;');
 console.log('%cInterested in how this site works? We can help you build your own!', 'font-size: 14px; color: #8b5cf6;');
-console.log('%cContact us at contact@equalpath.ai', 'font-size: 12px; color: #64748b;');
+console.log('%cContact us at hello@equalpath.ai', 'font-size: 12px; color: #64748b;');

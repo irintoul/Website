@@ -153,7 +153,7 @@ This is a business website, but if you notice any bugs or have suggestions:
 
 ## Contact
 
-- **Email**: contact@equalpath.ai
+- **Email**: info@equalpath.ai
 - **Website**: https://irintoul.github.io/Website/
 
 ---
