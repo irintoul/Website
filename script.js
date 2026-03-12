@@ -136,29 +136,114 @@ function highlightNavigation() {
 window.addEventListener('scroll', highlightNavigation);
 
 // ===========================
-// Form Handling (if you add a contact form later)
+// EmailJS Configuration
 // ===========================
 
-// This is a placeholder for future form functionality
-function handleFormSubmit(e) {
-    e.preventDefault();
+// EmailJS credentials - configured and ready to use
+// Dashboard: https://dashboard.emailjs.com/
+const EMAILJS_CONFIG = {
+    PUBLIC_KEY: 'tp57nyEDr_YG3S3qX',      // From Account > General
+    SERVICE_ID: 'service_bqa7537',        // Zoho Email Service
+    TEMPLATE_ID: 'wkhzdv8'                // Contact Form Template
+};
 
-    // Get form data
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData);
-
-    console.log('Form submitted:', data);
-
-    // Here you would typically send the data to a server
-    // For now, just show a success message
-    alert('Thank you for your interest! We will get back to you soon.');
-    e.target.reset();
+// Initialize EmailJS (only if credentials are configured)
+if (EMAILJS_CONFIG.PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
 }
 
-// If you add a form with id="contact-form", it will automatically work
+// ===========================
+// Contact Form Handling
+// ===========================
+
 const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', handleFormSubmit);
+const formSuccess = document.getElementById('form-success');
+
+if (contactForm && formSuccess) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+
+        console.log('Form submitted:', data);
+
+        // Disable submit button to prevent double submission
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
+        // Check if EmailJS is configured
+        if (EMAILJS_CONFIG.PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+            // Not configured yet - show helpful message
+            console.warn('EmailJS not configured yet. See setup instructions in script.js');
+            alert('EmailJS not configured yet!\n\nPlease follow the setup instructions at the top of script.js to connect your email service.\n\nFor now, please email us at: hello@equalpath.ai');
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+            return;
+        }
+
+        try {
+            // Send email using EmailJS
+            const response = await emailjs.sendForm(
+                EMAILJS_CONFIG.SERVICE_ID,
+                EMAILJS_CONFIG.TEMPLATE_ID,
+                contactForm
+            );
+
+            console.log('Email sent successfully:', response);
+
+            // Hide form and show success message
+            Array.from(contactForm.elements).forEach(element => {
+                if (element.tagName !== 'BUTTON') {
+                    element.style.display = 'none';
+                }
+            });
+            submitButton.style.display = 'none';
+            formSuccess.style.display = 'block';
+
+            // Track form submission
+            trackEvent('Contact Form', 'Submit', data.interest);
+
+            // Reset form after 10 seconds for another submission
+            setTimeout(() => {
+                contactForm.reset();
+                Array.from(contactForm.elements).forEach(element => {
+                    element.style.display = '';
+                });
+                submitButton.style.display = '';
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+                formSuccess.style.display = 'none';
+            }, 10000);
+
+        } catch (error) {
+            console.error('EmailJS error:', error);
+            alert('Sorry, there was an error sending your message.\n\nPlease try emailing us directly at: hello@equalpath.ai');
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+        }
+    });
+
+    // Add real-time validation feedback
+    const inputs = contactForm.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.validity.valid) {
+                this.style.borderColor = 'transparent';
+            } else {
+                this.style.borderColor = '#ef4444';
+            }
+        });
+
+        input.addEventListener('input', function() {
+            if (this.validity.valid && this.style.borderColor === 'rgb(239, 68, 68)') {
+                this.style.borderColor = 'transparent';
+            }
+        });
+    });
 }
 
 // ===========================
