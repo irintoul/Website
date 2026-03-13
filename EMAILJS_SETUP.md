@@ -32,6 +32,7 @@ Subject: New Contact Form Submission from {{name}}
 
 From: {{name}}
 Email: {{email}}
+Role: {{role}}
 Interested in: {{interest}}
 
 Message:
@@ -44,6 +45,7 @@ Sent via Equal Path contact form
 4. **Important**: Set the template variables:
    - `{{name}}` - maps to form field "name"
    - `{{email}}` - maps to form field "email"
+   - `{{role}}` - maps to form field "role"
    - `{{interest}}` - maps to form field "interest"
    - `{{message}}` - maps to form field "message"
 

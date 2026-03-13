@@ -144,7 +144,7 @@ window.addEventListener('scroll', highlightNavigation);
 const EMAILJS_CONFIG = {
     PUBLIC_KEY: 'tp57nyEDr_YG3S3qX',      // From Account > General
     SERVICE_ID: 'service_bqa7537',        // Zoho Email Service
-    TEMPLATE_ID: 'wkhzdv8'                // Contact Form Template
+    TEMPLATE_ID: 'template_7kz1yis'       // Contact Form Template
 };
 
 // Initialize EmailJS (only if credentials are configured)
@@ -186,11 +186,19 @@ if (contactForm && formSuccess) {
         }
 
         try {
-            // Send email using EmailJS
-            const response = await emailjs.sendForm(
+            // Send email using EmailJS with explicit template parameters
+            const templateParams = {
+                name: data.name,
+                email: data.email,
+                role: data.role,
+                interest: data.interest,
+                message: data.message
+            };
+
+            const response = await emailjs.send(
                 EMAILJS_CONFIG.SERVICE_ID,
                 EMAILJS_CONFIG.TEMPLATE_ID,
-                contactForm
+                templateParams
             );
 
             console.log('Email sent successfully:', response);
