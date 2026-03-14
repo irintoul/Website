@@ -659,6 +659,23 @@ section {
     font-size: 0.9rem;
 }
 
+.commitment-block {
+    max-width: 700px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: center;
+}
+
+.commitment-statement p {
+    color: var(--dark-alt);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+.commitment-statement .btn {
+    margin-top: var(--spacing-md);
+}
+
 .trust-badges {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
