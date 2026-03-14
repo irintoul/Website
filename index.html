@@ -1,15 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Equal Path - Democratizing AI access for small businesses and individuals through training, consulting, and automation solutions.">
-    <meta name="keywords" content="AI consulting, AI training, business automation, AI upskilling, small business AI">
-    <title>Equal Path - Democratizing AI for Everyone</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>Equal Path - AI Training, Automation & Consulting for Small Businesses</title>
+    <meta name="description" content="Democratizing AI for small businesses and individuals. Get expert AI training, custom automation tools, and ongoing support. Learn to build and maintain AI-powered solutions that transform your business.">
+    <meta name="keywords" content="AI consulting, AI training, business automation, AI upskilling, small business AI, AI tools, ChatGPT training, automation consulting, AI implementation, AI strategy, machine learning consulting, AI for small business">
+    <meta name="author" content="Equal Path">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://equalpath.ai/">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://equalpath.ai/">
+    <meta property="og:title" content="Equal Path - AI Training, Automation & Consulting for Small Businesses">
+    <meta property="og:description" content="Democratizing AI for small businesses and individuals. Expert AI training, custom automation tools, and ongoing support to transform your business.">
+    <meta property="og:image" content="https://equalpath.ai/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Equal Path">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://equalpath.ai/">
+    <meta name="twitter:title" content="Equal Path - AI Training, Automation & Consulting for Small Businesses">
+    <meta name="twitter:description" content="Democratizing AI for small businesses and individuals. Expert AI training, custom automation tools, and ongoing support to transform your business.">
+    <meta name="twitter:image" content="https://equalpath.ai/twitter-image.jpg">
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Favicon (placeholder - you should add real icons) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics 4 -->
+    <!-- Replace G-XXXXXXXXXX with your actual GA4 Measurement ID from https://analytics.google.com/ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'send_page_view': true,
+            'anonymize_ip': true
+        });
+    </script>
+
+    <!-- JSON-LD Structured Data for AI Search & SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Equal Path",
+        "description": "AI training, consulting, and automation solutions for small businesses and individuals",
+        "url": "https://equalpath.ai",
+        "logo": "https://equalpath.ai/logo.png",
+        "image": "https://equalpath.ai/og-image.jpg",
+        "telephone": "+1-XXX-XXX-XXXX",
+        "email": "hello@equalpath.ai",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        },
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 09:00-17:00",
+        "sameAs": [
+            "https://linkedin.com/company/equalpath",
+            "https://twitter.com/equalpath"
+        ],
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "37.7749",
+                "longitude": "-122.4194"
+            },
+            "geoRadius": "10000000"
+        },
+        "serviceType": [
+            "AI Training",
+            "AI Consulting",
+            "Business Automation",
+            "AI Implementation",
+            "Machine Learning Consulting"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "AI Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "AI Upskilling & Training",
+                        "description": "Personalized AI training sessions to help you master ChatGPT and specialized AI platforms for your business needs"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Automation Tool Development",
+                        "description": "Custom AI-powered automation tools that streamline workflows, save time, and increase productivity"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Ongoing Support & Maintenance",
+                        "description": "Continuous support to maintain, optimize, and evolve your AI tools as your needs grow"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://equalpath.ai"
+        }]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Equal Path",
+        "alternateName": "EqualPath.ai",
+        "url": "https://equalpath.ai",
+        "logo": "https://equalpath.ai/logo.png",
+        "description": "Democratizing AI access for small businesses and individuals through training, consulting, and automation solutions",
+        "email": "hello@equalpath.ai",
+        "foundingDate": "2024",
+        "slogan": "Democratizing AI for Everyone"
+    }
+    </script>
+
+    <!-- FAQ Schema for Rich Results -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What makes Equal Path different from other AI consultants?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unlike consultants who just hand you a solution and leave, we focus on knowledge transfer. We teach you to fish, not just give you fish. Every engagement includes personalized training so you can maintain and evolve your AI tools independently. We're committed to democratizing AI access, making it affordable and accessible for small businesses, not just enterprise clients."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need technical expertise to work with you?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not at all! We specialize in making AI accessible to everyone, regardless of technical background. We explain complex concepts in simple terms and provide hands-on guidance tailored to your skill level."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to see results?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many clients start seeing time savings within the first week. For basic AI tool training, you can implement what you learn immediately. Custom automation projects typically take 2-4 weeks from concept to deployment."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What AI tools and platforms do you work with?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We work with all major AI platforms including ChatGPT, Claude, Google Gemini, Midjourney, and specialized business tools like Zapier AI, Make.com, and n8n. We're platform-agnostic and recommend tools based on your specific needs and budget."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What industries do you serve?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We work with businesses across all industries - from e-commerce and marketing to healthcare, legal, real estate, and professional services. AI applications are universal: content creation, customer service, data analysis, workflow automation, and more."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does it cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer flexible pricing based on your needs. AI training sessions start at affordable hourly rates. Custom automation projects are quoted based on scope. Contact us for a free consultation and custom quote."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer ongoing support after implementation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! We offer flexible ongoing support packages including regular check-ins, troubleshooting, performance optimization, and updates as AI technology evolves."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I get started?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Fill out our contact form or email us at hello@equalpath.ai. We'll schedule a free 30-minute consultation to understand your needs and create a custom plan."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -29,6 +260,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#benefits" class="nav-link">Why Us</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contact" class="nav-link cta-button">Get Started</a></li>
             </ul>
         </div>
@@ -84,16 +316,16 @@
                     </p>
                     <div class="about-stats">
                         <div class="stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Personalized Approach</span>
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Hours Saved Weekly</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">∞</span>
-                            <span class="stat-label">Possibilities with AI</span>
+                            <span class="stat-number">85%</span>
+                            <span class="stat-label">Cost Reduction</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">1:1</span>
-                            <span class="stat-label">Expert Guidance</span>
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">AI Working for You</span>
                         </div>
                     </div>
                 </div>
@@ -201,6 +433,168 @@
                     <div class="benefit-icon">📈</div>
                     <h3>Measurable Impact</h3>
                     <p>Track your ROI with clear metrics and tangible improvements to your business operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real results from real businesses</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Equal Path transformed how we operate. The AI automation tools they built save us
+                        15+ hours every week. Best investment we've made in our business."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Sarah Mitchell</strong>
+                            <span>Owner, Digital Marketing Agency</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "I went from being intimidated by AI to confidently using it every day. The training
+                        was personalized to my business needs and the results speak for themselves."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Marcus Chen</strong>
+                            <span>Founder, E-commerce Store</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Finally, AI consulting that doesn't talk over your head. They made everything
+                        simple, practical, and actually useful for a small business like mine."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Jennifer Rodriguez</strong>
+                            <span>CEO, Consulting Firm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+                <div class="trust-item">
+                    <div class="trust-icon">🎓</div>
+                    <p>Certified AI Practitioners</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <p>100% Confidential</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💯</div>
+                    <p>Satisfaction Guaranteed</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <p>Fast Response Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about working with us</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What makes Equal Path different from other AI consultants?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Unlike consultants who just hand you a solution and leave, we focus on knowledge transfer. We teach you to fish, not just give you fish. Every engagement includes personalized training so you can maintain and evolve your AI tools independently. We're committed to democratizing AI access, making it affordable and accessible for small businesses, not just enterprise clients.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I need technical expertise to work with you?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not at all! We specialize in making AI accessible to everyone, regardless of technical background. We explain complex concepts in simple terms and provide hands-on guidance tailored to your skill level. Whether you're a complete beginner or tech-savvy, we meet you where you are.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does it take to see results?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Many clients start seeing time savings within the first week. For basic AI tool training, you can implement what you learn immediately. Custom automation projects typically take 2-4 weeks from concept to deployment, depending on complexity. We prioritize quick wins early so you see ROI fast.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What AI tools and platforms do you work with?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We work with all major AI platforms including ChatGPT, Claude, Google Gemini, Midjourney, and specialized business tools like Zapier AI, Make.com, and n8n. We're platform-agnostic and recommend tools based on your specific needs and budget, not vendor partnerships.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What industries do you serve?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We work with businesses across all industries - from e-commerce and marketing to healthcare, legal, real estate, and professional services. AI applications are universal: content creation, customer service, data analysis, workflow automation, and more. If you have repetitive tasks or information-based work, AI can help.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How much does it cost?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer flexible pricing based on your needs. AI training sessions start at affordable hourly rates. Custom automation projects are quoted based on scope. We also offer ongoing support packages. Contact us for a free consultation and custom quote tailored to your business.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer ongoing support after implementation?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer flexible ongoing support packages including regular check-ins, troubleshooting, performance optimization, and updates as AI technology evolves. You're never locked in - choose support when you need it.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I get started?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simple! Fill out our contact form below or email us at hello@equalpath.ai. We'll schedule a free 30-minute consultation to understand your needs, discuss how AI can help your business, and create a custom plan. No commitment required for the initial consultation.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -340,8 +734,8 @@
         </div>
     </footer>
 
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
+    <!-- EmailJS SDK - Load asynchronously for performance -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

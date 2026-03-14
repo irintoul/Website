@@ -1,0 +1,38 @@
+# robots.txt for Equal Path
+# https://equalpath.ai
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Specifically allow important AI search bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Disallow the hidden MacDonald Electric page from search results
+User-agent: *
+Disallow: /macdonald-electric.html
+
+# Sitemap location
+Sitemap: https://equalpath.ai/sitemap.xml
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 1
