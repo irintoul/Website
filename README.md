@@ -16,7 +16,7 @@ Equal Path is dedicated to providing equal access to artificial intelligence for
 
 ## Website Overview
 
-This is the official website for Equal Path, built with modern web technologies and best practices for 2025.
+This is the official website for Equal Path, built with modern web technologies and best practices for 2026.
 
 ### Features
 
@@ -149,7 +149,7 @@ This is a business website, but if you notice any bugs or have suggestions:
 
 ## License
 
-© 2025 Equal Path. All rights reserved.
+© 2026 Equal Path. All rights reserved.
 
 ## Contact
 
